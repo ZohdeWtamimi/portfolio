@@ -1,0 +1,460 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+        /* NAVBAR */
+
+#checkbox:checked + section{
+    background: linear-gradient(to right, #232366 0 30%, #0c061c);
+    color: #fff;
+}
+input{
+    display: none;
+    visibility: none;
+}
+.logo{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0c061c;
+    height: 100%;
+    line-height: 60px;
+    padding-inline: 10px;
+}
+#home{
+    border-bottom-right-radius: 15px;
+}
+.logo:visited{
+    color: #fff;
+}
+.logo:hover{
+    background-color: #2d0794; 
+    transform: scale(.9);
+    cursor: pointer;
+}
+label{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.white{
+    color: #fff;
+}
+.dark{
+    color: #120733;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    line-height: 60px;
+    list-style: none;
+    gap: 2px;
+
+}
+nav ul li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #0c061c;
+}
+nav ul li:hover{
+    background-color: #0c061c; 
+    transform: scale(.8);
+    cursor: pointer;
+}
+
+nav ul li a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+nav ul li a p{
+    margin-right: 5%;
+}
+
+        /* OJECTIVES */
+.container{
+    height: 650px;
+    width: 100%;    
+    background-image: url('./imgs/whatsup.jpeg');
+    background-size: cover;
+    background-position-y: -4rem;
+    background-repeat: no-repeat;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 6, 28, 0.822);
+}
+.col-1{
+    width: 100%;
+    margin-left: 15%;
+    color: #fff;
+}
+
+.col-1 h1{
+    font-size: 400%;
+    color: #fff;
+}
+.col-1 p{
+    font-size: 150%;
+}
+.col-1 p span{
+    color: #2d0794;
+    font-size: 200%;
+    font-weight: 700;
+}
+.toggle{
+    display: none;
+}
+.close{
+    display: none;
+}
+.small a{
+    display: none;
+}
+.ConConatainer{
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #0c061c;
+}
+.foot-col{
+    color: #fff;
+}
+.foot-col h2{
+    margin: 10px 0;
+    font-size: 2.5rem;
+    text-align: start;
+}
+.foot-col .icons{
+    margin-right:20px;
+    text-align: start;
+}
+
+.space{
+    margin-left: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.space:visited{
+    color: #fff;
+}
+.cont{
+    margin: 4px 0;
+    text-align: start;
+}
+
+
+/* Education */
+
+.EduConatiner{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.EduName{
+    margin: 50px 0;
+    text-align: center;
+    font-size: 2rem;
+}
+.EduRow{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card{
+    padding-bottom: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-bottom: 0;
+    box-shadow: rgba(0, 0, 0, 0.46) 0px 3px 6px, rgba(0, 0, 0, 0.53) 0px 3px 6px;
+}
+.card.spanOrange{
+    grid-column: 1/2 span;
+}
+.card.span{
+    grid-column: 1/3 span;
+}
+.card:hover{
+    border-bottom: 1px solid #fff;
+}
+.colImg{
+    display: block;
+    height: 200px;
+    width: 100%;
+}
+.cardText{
+    padding: 10px;
+}
+/* PROJECTS */
+.ProConatiner{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.ProName{
+    margin: 50px 0;
+    text-align: center;
+    font-size: 2rem;
+}
+.ProRow{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.ProCol{
+    position: relative;
+    cursor: pointer;
+    /* background-color: #fff; */
+} 
+ .ProCol .hover{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 0%;
+    background-color: #0a0519e7; 
+    transition: 2s ease-in;
+    opacity: 0;
+}
+.ProCol:hover .hover{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    color: #fff;
+}
+
+@media(max-width: 950px){
+    section{
+        background: linear-gradient(to right,#0c061c 0 30%, #232366);
+        color: #fff;
+    }
+    nav ul li a h3{
+        display: none;
+    }
+    nav ul li a p{
+        margin: 0;
+    }
+    label{
+        display: none;
+    }
+    .container{
+        height: 400px;
+        background: none;
+    }
+    .row{
+        grid-template-columns: 1fr;
+        background: rgba(12, 6, 28, 0.222);
+    }
+    .col-1{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .col-1 p span{
+        color: #fff;
+    }
+    .col-2{
+        display: none;
+    }
+    .EduConatiner{
+        width: 90%;
+    }
+    .EduName{
+        margin: 0;
+        padding: 15px;
+    }
+    .EduRow{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .card.spanOrange{
+        grid-column: 1/1 span;
+    }
+    .card.span{
+        grid-column: 1/2 span;
+    }
+    .ProConatiner{
+        width: 90%;
+    }
+    .ProName{
+        margin: 0;
+        padding-bottom: 30px;
+    }
+    .ProRow{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+}
+
+@media(max-width: 556px){
+    .container{
+        height: 350px;
+    }
+    nav{
+        position: fixed;
+        height: 100vh;
+        right: -500px;
+        width: 80%;
+        background-color: #232366;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: 3s all ease;
+        z-index: 999;
+    }
+    nav > a{
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background-color: #232366;
+        /* display: none; */
+    }
+    #home{
+        margin-top: 60px;
+        border-bottom-right-radius: 0;
+    }
+    .logo{
+        padding: 0;
+        height: auto;
+        margin: 2px;
+    }
+    nav ul li a h3{
+        display: block;
+        height: 20px;
+        margin-left: 15px;
+    }
+    nav ul{
+        flex-direction: column;
+        height: auto;
+        /* background-color: aqua; */
+        width: 100%;
+        
+    }
+    nav .close{
+        position: absolute;
+        display: block;
+        left: 5%;
+        top: 1.5%;
+    }
+    #toggle:checked + nav{
+        transform: translateX(-500px);
+    }
+    .toggle{
+        /* position: absolute; */
+        /* right: 0; */
+        
+        display: block;
+        text-align: end;
+        margin-right: 20px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .col-1{
+        width: 90%;
+        /* margin-left: 15%; */
+        color: #fff;
+        line-height: 30px;
+    }
+    
+    .col-1 h1{
+        margin-bottom: 40px;
+        font-size: 200%;
+        color: #fff;
+    }
+    .col-1 p{
+        font-size: 120%;
+    }
+    .col-1 p span{
+        color: #fff;
+        font-size: 150%;
+        font-weight: 700;
+    }
+    .small{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .small a{
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        margin-left: 20px;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    .EduRow{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .card.spanOrange{
+        grid-column: 1/1 span;
+    }
+    .card.span{
+        grid-column: 1/1 span;
+    }
+    .ProRow{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .ProConatiner{
+        width: 80%;
+    }
+    .borderRad{
+        height: 300px;
+    }
+    .borderRad, .ProCol .hover{
+        border-radius: 4px;
+    }   
+    .ConConatainer{
+        flex-direction: column;
+        height: 200px;
+        background-color: transparent;
+        width: 80%;
+    }
+    .foot-col h2{
+        font-size: 1rem;
+    }
+    .foot-col .icons{
+        margin: 0;
+        text-align: center;
+    }
+}
