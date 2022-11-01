@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
-
+#Objectives, #Education{
+    padding-top: 60px;
+}
         /* NAVBAR */
-
-#checkbox:checked + section{
+.darkblue{
     background: linear-gradient(to right, #232366 0 30%, #0c061c);
     color: #fff;
 }
@@ -23,7 +25,6 @@ input{
     font-size: 1.3rem;
     font-weight: bold;
     color: #fff;
-    background-color: #0c061c;
     height: 100%;
     line-height: 60px;
     padding-inline: 10px;
@@ -43,19 +44,21 @@ label{
     font-size: 2rem;
     cursor: pointer;
 }
-.white{
-    color: #fff;
-}
-.dark{
-    color: #120733;
-    
-}
 
+.navContainer{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #0c061c;
+}
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 nav ul{
@@ -66,7 +69,6 @@ nav ul{
     line-height: 60px;
     list-style: none;
     gap: 2px;
-
 }
 nav ul li{
     display: flex;
@@ -76,11 +78,10 @@ nav ul li{
     background-color: #0c061c;
 }
 nav ul li:hover{
-    background-color: #0c061c; 
     transform: scale(.8);
     cursor: pointer;
+    background-color: #2d0794; 
 }
-
 nav ul li a{
     display: flex;
     justify-content: center;
@@ -104,23 +105,30 @@ nav ul li a p{
     background-position-y: -4rem;
     background-repeat: no-repeat;
 }
+.bgOpacity{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 6, 28, 0.822);
+}
 .row{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center; 
-    width: 100%;
+    width: 80%;
     height: 100%;
-    background: rgba(12, 6, 28, 0.822);
+    margin: 0 auto;
 }
 .col-1{
     width: 100%;
-    margin-left: 15%;
     color: #fff;
 }
 
 .col-1 h1{
-    font-size: 400%;
+    font-size: 300%;
     color: #fff;
+}
+.col-1 h2{
+    font-size: 300%;
 }
 .col-1 p{
     font-size: 150%;
@@ -129,6 +137,20 @@ nav ul li a p{
     color: #2d0794;
     font-size: 200%;
     font-weight: 700;
+}
+.actionBtn{
+    width: 34%;
+    height: 40px;
+    margin-top: 20px;
+    padding: 4px;
+    display: block;
+    background-color: #2d0794;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 32px;
 }
 .toggle{
     display: none;
@@ -139,46 +161,8 @@ nav ul li a p{
 .small a{
     display: none;
 }
-.ConConatainer{
-    width: 100%;
-    margin: 0 auto;
-    height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    text-align: center;
-    padding-bottom: 20px;
-    background-color: #0c061c;
-}
-.foot-col{
-    color: #fff;
-}
-.foot-col h2{
-    margin: 10px 0;
-    font-size: 2.5rem;
-    text-align: start;
-}
-.foot-col .icons{
-    margin-right:20px;
-    text-align: start;
-}
 
-.space{
-    margin-left: 20px;
-    font-size: 1.5rem;
-    color: #fff;
-}
-.space:visited{
-    color: #fff;
-}
-.cont{
-    margin: 4px 0;
-    text-align: start;
-}
-
-
-/* Education */
-
+                /* Education */
 .EduConatiner{
     width: 80%;
     margin: 0 auto;
@@ -196,7 +180,6 @@ nav ul li a p{
 }
 .card{
     padding-bottom: 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     border-bottom: 0;
     box-shadow: rgba(0, 0, 0, 0.46) 0px 3px 6px, rgba(0, 0, 0, 0.53) 0px 3px 6px;
 }
@@ -236,7 +219,6 @@ nav ul li a p{
 .ProCol{
     position: relative;
     cursor: pointer;
-    /* background-color: #fff; */
 } 
  .ProCol .hover{
     position: absolute;
@@ -258,10 +240,52 @@ nav ul li a p{
     color: #fff;
 }
 
+                /* contact */
+.ConConatainer{
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #0c061c;
+}
+.foot-col{
+    color: #fff;
+                }
+.foot-col h2{
+    margin: 10px 0;
+    font-size: 2rem;
+    text-align: start;
+}
+.foot-col .icons{
+    display: flex;
+    justify-content: space-around;
+}              
+.space{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.space:visited{
+    color: #fff;
+}
+.cont{
+    margin: 4px 0;
+    text-align: start;
+}
+                /*    media     */
+
 @media(max-width: 950px){
-    section{
-        background: linear-gradient(to right,#0c061c 0 30%, #232366);
-        color: #fff;
+    .navContainer{
+        border-bottom: 1px solid #fff;
+    }
+    nav{
+        width: 90%;
+    }
+    nav ul li{
+        height: calc(100% - 2px);
     }
     nav ul li a h3{
         display: none;
@@ -273,19 +297,30 @@ nav ul li a p{
         display: none;
     }
     .container{
-        height: 400px;
+        height: 350px;
         background: none;
     }
     .row{
         grid-template-columns: 1fr;
-        background: rgba(12, 6, 28, 0.222);
     }
     .col-1{
         margin: 0 auto;
         width: 90%;
     }
+    .col-1 h2{
+        display: none;
+    }
+    .col-1 h1{
+        margin-bottom: 16px;
+    }
     .col-1 p span{
         color: #fff;
+        font-size: 100%;
+    }
+    .actionBtn{
+        margin-top: 24px;
+        width: 20%;
+        font-size: 22px;
     }
     .col-2{
         display: none;
@@ -320,13 +355,20 @@ nav ul li a p{
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
+    .ConConatainer{
+        background: transparent;
+    }
     
 }
 
-@media(max-width: 556px){
-    .container{
-        height: 350px;
+@media(max-width: 565px){
+    #Objectives{
+        padding-top: 0;
     }
+    .container{
+        height: 400px;
+    }
+    
     nav{
         position: fixed;
         height: 100vh;
@@ -335,7 +377,7 @@ nav ul li a p{
         background-color: #232366;
         flex-direction: column;
         justify-content: flex-start;
-        transition: 3s all ease;
+        transition: 2.5s all ease;
         z-index: 999;
     }
     nav > a{
@@ -344,7 +386,6 @@ nav ul li a p{
         line-height: 60px;
         text-align: center;
         background-color: #232366;
-        /* display: none; */
     }
     #home{
         margin-top: 60px;
@@ -363,7 +404,6 @@ nav ul li a p{
     nav ul{
         flex-direction: column;
         height: auto;
-        /* background-color: aqua; */
         width: 100%;
         
     }
@@ -377,9 +417,6 @@ nav ul li a p{
         transform: translateX(-500px);
     }
     .toggle{
-        /* position: absolute; */
-        /* right: 0; */
-        
         display: block;
         text-align: end;
         margin-right: 20px;
@@ -387,24 +424,34 @@ nav ul li a p{
         line-height: 50px;
     }
     .col-1{
-        width: 90%;
-        /* margin-left: 15%; */
+        width: 100%;
         color: #fff;
         line-height: 30px;
+        display: flex;
+        flex-direction: column;
     }
-    
+    .col-1 h2{
+        display: none;
+    }
     .col-1 h1{
-        margin-bottom: 40px;
-        font-size: 200%;
+        margin-top: 0px;
+        font-size: 150%;
         color: #fff;
     }
     .col-1 p{
+        margin: 0;
         font-size: 120%;
     }
     .col-1 p span{
         color: #fff;
-        font-size: 150%;
+        font-size: 100%;
         font-weight: 700;
+    }
+    .actionBtn{
+        margin-top: 20px;
+        align-self: center;
+        width: 40%;
+        font-size: 20px;
     }
     .small{
         display: flex;
@@ -451,10 +498,9 @@ nav ul li a p{
         width: 80%;
     }
     .foot-col h2{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
-    .foot-col .icons{
-        margin: 0;
-        text-align: center;
+    .space{
+        margin-left: 10px;
     }
 }
