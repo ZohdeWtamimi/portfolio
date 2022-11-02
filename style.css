@@ -25,6 +25,7 @@ input{
 }
 .logo{
     height: 80%;
+    display: block;
 }
 .logo img{
     height: 100%;
@@ -409,7 +410,7 @@ nav ul li a p{
         flex-direction: column;
         height: auto;
         width: 100%;
-        
+        margin-top: 55px;
     }
     nav .close{
         position: absolute;
@@ -469,6 +470,9 @@ nav ul li a p{
         margin-left: 20px;
         font-size: 1.3rem;
         font-weight: 700;
+    }
+    .none{
+        display: none;
     }
     .EduRow{
         display: grid;
