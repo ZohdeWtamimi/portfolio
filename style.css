@@ -13,7 +13,7 @@ html {
 }
         /* NAVBAR */
 .darkblue{
-    background: linear-gradient(to right, #EEEEEE 0 30%, #0c061c57 40%, #0c061c7b 50%, #0c061cb7 80% );
+    background: linear-gradient(to right,  #0c061ca2 30%, #0c061ca2 31%, #0c061c57 60%, #EEEEEE  80%);
     color: #fff;
 }
 input{
