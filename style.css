@@ -81,7 +81,6 @@ nav ul li{
 nav ul li:hover{
     transform: scale(.8);
     cursor: pointer;
-    background-color: #2d0794; 
 }
 nav ul li a{
     display: flex;
@@ -182,6 +181,7 @@ nav ul li a p{
 .card{
     padding-bottom: 5px;
     border-bottom: 0;
+    background-color: #0c061ca2;
     box-shadow: rgba(0, 0, 0, 0.46) 0px 3px 6px, rgba(0, 0, 0, 0.53) 0px 3px 6px;
 }
 .card.spanOrange{
@@ -299,7 +299,8 @@ nav ul li a p{
     }
     .container{
         height: 350px;
-        background: none;
+        background: #0c061ca2;
+        /* background: none; */
     }
     .row{
         grid-template-columns: 1fr;
@@ -356,10 +357,6 @@ nav ul li a p{
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
-    .ConConatainer{
-        background: transparent;
-    }
-    
 }
 
 @media(max-width: 565px){
@@ -375,7 +372,7 @@ nav ul li a p{
         height: 100vh;
         right: -500px;
         width: 80%;
-        background-color: #232366;
+        background-color: #c0c2c8f4;
         flex-direction: column;
         justify-content: flex-start;
         transition: 2.5s all ease;
@@ -386,7 +383,7 @@ nav ul li a p{
         height: 60px;
         line-height: 60px;
         text-align: center;
-        background-color: #232366;
+        background-color: #26262d;
     }
     #home{
         margin-top: 60px;
@@ -416,7 +413,13 @@ nav ul li a p{
         position: absolute;
         display: block;
         left: 5%;
-        top: 1.5%;
+        top: 2%;
+        background-color: #0c061c;
+        font-size: 1rem;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        line-height: 25px;
     }
     #toggle:checked + nav{
         transform: translateX(-500px);
@@ -427,6 +430,7 @@ nav ul li a p{
         margin-right: 20px;
         height: 50px;
         line-height: 50px;
+        color: #0c061ca2;
     }
     .col-1{
         width: 100%;
@@ -478,6 +482,9 @@ nav ul li a p{
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    .card{
+        background-color: #0c061ca2;
     }
     .card.spanOrange{
         grid-column: 1/1 span;
