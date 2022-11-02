@@ -13,21 +13,22 @@ html {
 }
         /* NAVBAR */
 .darkblue{
-    background: linear-gradient(to right, #232366 0 30%, #0c061c);
+    background: linear-gradient(to right, #EEEEEE 0 30%, #0c061c57 40%, #0c061c7b 50%, #0c061cb7 80% );
     color: #fff;
 }
 input{
     display: none;
     visibility: none;
 }
+.topIcon{
+    background-color: #0c061c;
+}
 .logo{
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #fff;
+    height: 80%;
+}
+.logo img{
     height: 100%;
-    line-height: 60px;
-    padding-inline: 10px;
+    width: 100%;
 }
 #home{
     border-bottom-right-radius: 15px;
@@ -36,7 +37,6 @@ input{
     color: #fff;
 }
 .logo:hover{
-    background-color: #2d0794; 
     transform: scale(.9);
     cursor: pointer;
 }
@@ -395,6 +395,10 @@ nav ul li a p{
         padding: 0;
         height: auto;
         margin: 2px;
+    }
+    .logo img{
+        height: 30px;
+        width: 30px;
     }
     nav ul li a h3{
         display: block;
